@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <title>HiddenButton</title>
+    </head>
+    <body>
+        <div class = "container">
+            <div class="card text-center" style= "width: 81rem;" >
+                <div class = "card-header">
+                    <h3>Will you be the winner?</h3>
+                </div>
+                <div class="card-body">
+                    <p class= "card-text">Choose a button to find out</p>
+                    <div class="d-grid gap-2 d-md-block">
+                        <button id="button1" class="btn btn-danger btn-lg">Press</button>
+                        <button id="button2" class="btn btn-danger btn-lg">Press</button>
+                        <button id="button3" class="btn btn-danger btn-lg">Press</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class = "container">
+            <div class="card text-center" style= "width: 81rem;" >
+                <div class = "card-header">
+                    <h5>Buttons Generator</h5>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Introduce the number of buttons you want to generate</span>
+                    <input type="number" id="numberOfButtons" min="2" max="100" class="form-control" placeholder="Numbers between 2 and 100" aria-describedby="generate">
+                    <button id="generate" class="btn btn-outline-secondary" type="button">Generate</button>
+                </div>
+                <div id="generatedButtons"></div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
+

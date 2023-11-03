@@ -4,7 +4,6 @@ const randomWinner = Math.floor(Math.random() * 3);
 function click(event) {
     let pressedButton = event.target;
     let index = Array.from(buttons).indexOf(pressedButton);
-
     if (index == randomWinner) {
         pressedButton.textContent = "Winner";
         pressedButton.classList.remove("btn-danger");

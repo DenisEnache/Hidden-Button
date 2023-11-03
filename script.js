@@ -1,10 +1,9 @@
-const buttons = document.querySelectorAll(".btn-danger");
-const randomWinner = Math.floor(Math.random() * 3);
+const winnerSelectorThreeBtn = Math.floor(Math.random() * 3);
+const threeButtons = document.querySelectorAll(".btn-danger");
 
-function click(event) {
-    let pressedButton = event.target;
-    let index = Array.from(buttons).indexOf(pressedButton);
-    if (index == randomWinner) {
+function winnerOrLoser(index) {
+    let pressedButton = threeButtons[index];
+    if (index == winnerSelectorThreeBtn) {
         pressedButton.textContent = "Winner";
         pressedButton.classList.remove("btn-danger");
         pressedButton.classList.add("btn-success");
@@ -13,23 +12,17 @@ function click(event) {
     }
 }
 
-buttons.forEach(function (button) {
-    button.addEventListener("click", click);
-});
-
-const generate = document.getElementById("generate");
-const number = document.getElementById("numberOfButtons");
+const buttonsNumberInput = document.getElementById("numberOfButtons");
 const generatedButtons = document.getElementById("generatedButtons");
 
-generate.addEventListener("click", function () {
-    const numberOfButtons = number.value;
-    const newButtonsRandomWinner = Math.floor(Math.random() * numberOfButtons);
-    for(let i = 0; i < numberOfButtons; i++) {
+function buttonsGenerator() {
+    const winnerSelectorGeneratedBtn = Math.floor(Math.random() * parseInt(buttonsNumberInput.value));
+    for(let i = 0; i < parseInt(buttonsNumberInput.value); i++) {
         const newButtons = document.createElement("button");
         newButtons.textContent = "Press";
         newButtons.classList.add("btn-secondary", "btn-lg", "p-2", "m-2");
         newButtons.addEventListener("click", function() {
-            if (i == newButtonsRandomWinner) {
+            if (i == winnerSelectorGeneratedBtn) {
                 newButtons.textContent = "Winner";
                 newButtons.classList.remove("btn-secondary");
                 newButtons.classList.add("btn-success");
@@ -41,4 +34,4 @@ generate.addEventListener("click", function () {
         })
         generatedButtons.appendChild(newButtons);
     }
-});
+}

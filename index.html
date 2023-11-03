@@ -8,31 +8,31 @@
         <title>HiddenButton</title>
     </head>
     <body>
-        <div class = "container">
-            <div class="card text-center" style= "width: 81rem;" >
-                <div class = "card-header">
+        <div class ="container">
+            <div class="card text-center" style="width: 81rem;" >
+                <div class ="card-header">
                     <h3>Will you be the winner?</h3>
                 </div>
                 <div class="card-body">
-                    <p class= "card-text">Choose a button to find out</p>
+                    <p class="card-text">Choose a button to find out</p>
                     <div class="d-grid gap-2 d-md-block">
-                        <button id="button1" class="btn btn-danger btn-lg">Press</button>
-                        <button id="button2" class="btn btn-danger btn-lg">Press</button>
-                        <button id="button3" class="btn btn-danger btn-lg">Press</button>
+                        <button id="button1" class="btn btn-danger btn-lg" onclick="winnerOrLoser(0)">Press</button>
+                        <button id="button2" class="btn btn-danger btn-lg" onclick="winnerOrLoser(1)">Press</button>
+                        <button id="button3" class="btn btn-danger btn-lg" onclick="winnerOrLoser(2)">Press</button>
                     </div>
                 </div>
             </div>
         </div>
         <br>
-        <div class = "container">
-            <div class="card text-center" style= "width: 81rem;" >
-                <div class = "card-header">
+        <div class ="container">
+            <div class="card text-center" style="width: 81rem;" >
+                <div class ="card-header">
                     <h5>Buttons Generator</h5>
                 </div>
                 <div class="input-group input-group-sm mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-sm">Introduce the number of buttons you want to generate</span>
                     <input type="number" id="numberOfButtons" min="2" max="100" class="form-control" placeholder="Numbers between 2 and 100" aria-describedby="generate">
-                    <button id="generate" class="btn btn-outline-secondary" type="button">Generate</button>
+                    <button id="generateButton" class="btn btn-outline-secondary" type="button" onclick="buttonsGenerator()">Generate</button>
                 </div>
                 <div id="generatedButtons"></div>
             </div>
@@ -40,4 +40,3 @@
         <script src="script.js"></script>
     </body>
 </html>
-

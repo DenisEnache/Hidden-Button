@@ -7,6 +7,7 @@ The HiddenButton web application is a simple game. The application features two 
 ### Features
 
 **Three-Button Luck Test:** Initially, the application displays three buttons. Users can click on one to see if they've selected the winning button.
+
 **Dynamic Button Generator:** Users can input a desired number of buttons (between 2 and 100), and the application will generate that number of buttons. Clicking on one of these buttons will reveal if it's the winner.
 
 ### How It Works
